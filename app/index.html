@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="utf-8">
-	<title></title>
-	<meta name="description" content="">
+	<title>WFFW</title>
+	<meta name="description" content="WFFW">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="path/to/image.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="icon" href="img/favicon/favicon.ico">
 
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 
-	<header>
+	<header class="wrapper">
 		<a href="#" class="logo">
-			<img src="" alt="">
+			<img src="img/logo.svg" alt="Логотип">
 		</a>
 		<div class="header_actions">
 			<div class="header_choose-language">
-				<img src="" alt="">
+				<img src="img/lang-ru.png" alt="ru">
 				<p>Русский</p>
 				<span></span>
 			</div>
 			<a href="#" class="header_choose-broker">Выбрать брокера</a>
 			<p class="header_old">
-				<span class="header_old_number">11</span>
+				<span class="header_old_number bold">11</span>
 				<span class="header_old_text">Лет в сфере финансов</span>
 			</p>
 		</div>
 	</header>
+
 	<nav>
-		<ul>
+		<ul class="wrapper">
 			<li class="nav_item"><a href="">Главная</a></li>
 			<li class="nav_item"><a href="">Брокеры</a></li>
 			<li class="nav_item"><a href="">Банки</a></li>
@@ -43,23 +44,26 @@
 			<li class="nav_item"><a href="">Опционы</a></li>
 		</ul>
 	</nav>
+
 	<section class="firts-block">
-		<h3><span>Запустите Блог</span>вашей компании на</h3>
-		<div class="firts-block-h1">
-			<h1>WFFW.INFO</h1>
-			<p>и бесплатно получите аудиторию для вашего сайт</p>
-		</div>
-		<h4>Ваши посты будут анонсироваться на главной странице нашего проекта.</h4>
-		<div class="firts-block-actions">
-			<a href="#" class="red-btn">Запустить блог</a>
-			<a href="#" class="outline-btn">Узнать подробнее</a>
+		<div class="wrapper">
+			<h3><span>Запустите Блог</span>вашей компании на</h3>
+			<div class="firts-block-h1">
+				<h1>WFFW.INFO</h1>
+				<p>и бесплатно получите аудиторию для вашего сайт</p>
+			</div>
+			<h4>Ваши посты будут анонсироваться на главной странице нашего проекта.</h4>
+			<div class="firts-block-actions">
+				<a href="#" class="red-btn">Запустить блог</a>
+				<a href="#" class="outline-btn">Узнать подробнее</a>
+			</div>
 		</div>
 	</section>
 
 	<section class="search">
-		<form action="">
+		<form action="" class="wrapper">
 			<input type="search" placeholder="Что ищем?" required>
-			<button>Найти</button>
+			<button class="red-btn">Найти <img src="img/next_arrow.svg" alt=""></button>
 		</form>
 	</section>
 
@@ -68,7 +72,9 @@
 		<div class="leading_items">
 			<div class="leading_item">
 				<div class="leading_item_content">
-					<img src="" alt="">
+					<a href="" class="leading_item_content__logo">
+						<img src="img/logo1.jpg" alt="">
+					</a>
 					<div class="leading_item_info">
 						<p class="leading_item_info__changes">241%</p>
 						<h5 class="leading_item_info__name">Alpha Strategy</h5>
@@ -114,11 +120,112 @@
 
 		</div>
 		<div class="last-blog_right">
-
+			<p class="other-news_title"></p>
+			<div class="other-news">
+				<time>24.01.2020</time>
+				<h4 class="other-news_title">Заголовок статьи статьи 1 в два этажа <span>> </span></h4>
+			</div>
 		</div>
 	</section>
 
+	<section class="stocks">
+		<div class="stocks_head section_head">
+			<h2>Акции</h2>
+      <div class="stocks_head_actions">
+      	<p class="stocks_result"><span>160</span>Результатов всего</p>
+				<select class="stocks_languages">
+					<option value="">Все</option>
+					<option value="" selected>США</option>
+					<option value="">Россия</option>
+				</select>
+				<div class="stocks_slider_btn">
+					<a href="">Предыдущие</a>
+					<a href="">Следующие</a>
+				</div>
+				<a href="" class="red-btn">Показать все</a>
+      </div>
+		</div>
+		<div class="stocks_body">
+			<div class="stocks_item">
+				<img src="" class="stocks_item__logo" alt="">
+				<p>axp
+					<span>American Express Co</span>
+				</p>
+				<p>></p>
+			</div>
+		</div>
+	</section>
 
+	<section class="stocks">
+
+	</section>
+
+	<section class="brokers">
+		<div class="section_head">
+			<h2>Лицензированные брокеры ЦБ РФ</h2>
+		</div>
+		<div class="brokers_body">
+			<div class="brokers_item">
+				<img src="" alt="">
+				<div class="brokers_item__text">
+					<h6>Альфа-Форекс</h6>
+					<p>Это российское лицензирование, узкие спреды и принадлежность к бренду с безупречной деловой репутацией. Предоставляет актуальную аналитику и обеспечивает профессиональную клиентскую поддержку. Совершенствование продуктов и сервисов — одно из основных направлений стратегии развития.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="stocks">
+
+	</section>
+
+	<section class="stocks">
+
+	</section>
+
+	<section class="stocks">
+
+	</section>
+
+
+	<section class="wffw">
+		<h2></h2>
+		<p>WFFW.info Это финансовый портал, который был основан в 2009 году. За 11 лет наш проект посетили миллионы людей. На wffw.info вы можете найти информацию о финансовых рынках. Мы предоставляем информацию и котировки по валютному рынку, фондовому рынку Росси, США, Европы, Азии, товарным рынкам ( золото, нефть, серебро и.т.д ) и криптовалютам.</p>
+		<p>Проект wffw.info предоставляет сервис блогов для бизнеса. Мы приглашаем к сотрудничеству предприятия из сферы финансов ( банки, брокеры, платежные системы, аналитические агентства ). Запустите блог вашей компании у нас на сайте! Это бесплатно. Публикуйте интересный контент и привлекайте новых клиентов в ваш бизнес.</p>
+	</section>
+
+	<footer>
+
+		<div class="footer-statistic">
+			<div class="statistic_item">
+				<div class="statistic_item_img">
+					<span>300</span>
+				</div>
+				<p class="statistic_item_text">Мы привлекли более 3000 трейдеров на финансовые рынки</p>
+      </div>
+		</div>
+
+		<div class="footer_links">
+			<div class="links_item">
+				<p>ТОРГОВЛЯ</p>
+				<ul>
+					<li><a href="">Рейтинг брокеров</a></li>
+					<li><a href="">Инвестиции</a></li>
+					<li><a href="">Банки</a></li>
+					<li><a href="">Торговля акциями</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer_info">
+			<p>Проект wffw.info является информационным ресурсом и не предоставляет финансовых услуг. Мы проводим рейтинги брокерских компаний для каждой страны учитывая местное законодательство. Для клиентов из России мы настоятельно рекомендуем брокеров с лицензией ЦБ РФ. Сайт wffw.info партнер лицензированных форекс дилеров в России ООО “Альфа-форекс” и АО “Финам”. Информация по брокерским компаниям имеющих лицензии других юрисдикций предоставляется для клиентов не проживающих в России.</p>
+			<p>Уведомление о рисках: начиная работать на финансовых рынках, убедитесь, что вы осознаете риски, с которыми сопряжена торговля с использованием кредитного плеча, и что вы имеете достаточный уровень подготовки.</p>
+			<a href="">Политика конфиденциальности</a>
+			<a href="">Перепечатка материалов</a>
+		</div>
+
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
 </body>

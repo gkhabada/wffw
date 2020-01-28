@@ -83,7 +83,7 @@ gulp.task('imgmin', function() {
 		imagemin.optipng({optimizationLevel: 5}),
 		imagemin.svgo({plugins: [{removeViewBox: false}]})
 	]))
-	.pipe(gulp.dest('app/img/src'))
+	.pipe(gulp.dest('app/img'))
 });
 
 // Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
