@@ -5,18 +5,30 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.wrapper {
-	max-width: 1120px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 a {
 	text-decoration: none;
 }
 
 .bold {
 	font-weight: bold;
+}
+
+.wrapper {
+	max-width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	font-size: 34px;
+	line-height: 46px;
+	color: #111111;
+	font-weight: 300;
+}
+
+.section_head {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #D3DFE3;
 }
 
 .red-btn {
@@ -249,11 +261,282 @@ nav {
 	}
 }
 
+// leading
+
+.leading {
+	padding: 48px 35px;
+	background: #FCFCFC;
+
+	h2 {
+		margin-bottom: 37px;
+	}
+
+	.leading_items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 16px;
+
+		.leading_item {
+			width: 337px;
+			border: 2px solid #E5EEF1;
+			box-sizing: border-box;
+			box-shadow: 0px 5px 15px rgba(57, 71, 72, 0.1);
+			border-radius: 6px;
+			overflow: hidden;
+			margin-bottom: 33px;
+
+			.leading_item_content {
+				padding: 10px;
+				box-sizing: border-box;
+				display: flex;
+
+				.leading_item_content__logo {
+					margin-right: 18px;
+					height: 104px;
+					width: 104px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
+				}
+
+				.leading_item_info {
+
+					.leading_item_info__changes {
+						margin-bottom: 5px;
+						font-weight: bold;
+						font-size: 20px;
+						line-height: 27px;
+						color: #54A416;
+					}
+
+					.leading_item_info__name {
+						margin-bottom: 5px;
+						font-weight: bold;
+						font-size: 16px;
+						line-height: 22px;
+						color: #111111;
+					}
+
+					.leading_item_info__history {
+						margin-bottom: 4px;
+						font-size: 14px;
+						line-height: 19px;
+						color: #6D8088;
+					}
+
+					.leading_item_info__old {
+						font-weight: 600;
+						font-size: 16px;
+						line-height: 22px;
+						color: #111111;
+					}
+				}
+			}
 
 
+			.leading_item_actions {
+				padding: 8px 10px 7px;
+				box-sizing: border-box;
+					width: 100%;
+					background: #F7FAFE;
+
+				 a {
+					 color: #394748;
+					 transition: 0.4s;
+					 line-height: 25px;
+					 width: 49%;
+					 display: inline-block;
+					 text-align: center;
+
+					 &:hover {
+						 color: $red;
+					 }
+
+					 img {
+						 margin-right: 14px;
+					 }
+				 }
+
+				 .leading_item__more {
+					 box-sizing: border-box;
+					 border-right: 1px solid #E1E9F4;
+				 }
+			}
+		}
+	}
+
+	.red-btn {
+		padding-left: 66px;
+		padding-right: 66px;
+		margin: 0 auto;
+		display: block;
+	}
+}
 
 
+// last-blog
 
+.last-blog {
+	padding-top: 34px;
+
+	h2 {
+		margin-bottom: 44px;
+	}
+}
+
+// stocks
+
+.stocks {
+	margin-top: 85px;
+
+	.stocks_head {
+		display: flex;
+		justify-content: space-between;
+
+		.stocks_head_actions {
+			display: flex;
+			align-items: center;
+
+			.stocks_result {
+				font-size: 18px;
+				line-height: 24px;
+				color: #111111;
+				margin-right: 32px;
+			}
+
+			.stocks_languages {
+				border: 2px solid #C5D5DC;
+				box-sizing: border-box;
+				border-radius: 6px;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 150px;
+				height: 44px;
+				margin-right: 30px;
+			}
+
+			.stocks_slider_btn {
+				border: 2px solid #C5D5DC;
+				box-sizing: border-box;
+				border-radius: 6px;
+				line-height: 40px;
+				margin-right: 30px;
+
+				a {
+					height: 100%;
+			    display: inline-block;
+					padding: 0 15px;
+					color: #394748;
+
+					&:hover {
+						color: $red;
+					}
+				}
+
+				.prev-arrow {
+					border-right: 2px solid #C5D5DC;
+					img {
+						margin-right: 14px;
+					}
+				}
+
+				.next-arrow img {
+					margin-left: 14px;
+				}
+			}
+
+			.red-btn {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
+
+	.stocks_body {
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		.stocks_item {
+			width: 258px;
+			background: #FFFFFF;
+			border: 2px solid #E5EEF1;
+			box-sizing: border-box;
+			border-radius: 10px;
+			padding: 17px 30px 17px 20px;
+			transition: 0.4s;
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				border-color: $red;
+
+				.stocks_item__arrow svg path{
+					stroke: $red;
+				}
+			}
+
+			.stocks_item__title {
+				margin: 0 15px;
+
+				.stocks_item__name {
+					font-size: 14px;
+					line-height: 16px;
+					text-transform: uppercase;
+					font-weight: 600;
+					display: block;
+				}
+
+				.stocks_item__from {
+					font-size: 12px;
+					line-height: 16px;
+					color: #8C9BAB;
+				}
+			}
+
+			.stocks_item__arrow {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+// brokers
+
+.brokers {
+	padding:  42px 0 44px;
+	background: #FCFCFC;
+
+	.brokers_body {
+		margin-top: 49px;
+
+		.brokers_item {
+			display: flex;
+			margin-bottom: 45px;
+
+			.brokers_item__text {
+				margin-left: 96px;
+
+				h6 {
+					font-size: 16px;
+					line-height: 22px;
+					margin-bottom: 9px;
+				}
+
+				p {
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}
 
 
 

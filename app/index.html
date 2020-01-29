@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="path/to/image.jpg">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="icon" href="img/favicon/favicon.ico">
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -68,30 +68,71 @@
 	</section>
 
 	<section class="leading">
-		<h2>Ведущие торговые системы</h2>
-		<div class="leading_items">
-			<div class="leading_item">
-				<div class="leading_item_content">
-					<a href="" class="leading_item_content__logo">
-						<img src="img/logo1.jpg" alt="">
-					</a>
-					<div class="leading_item_info">
-						<p class="leading_item_info__changes">241%</p>
-						<h5 class="leading_item_info__name">Alpha Strategy</h5>
-						<p class="leading_item_info__history">Торговая история:</p>
-						<p class="leading_item_info__old">2 года</p>
+		<div class="wrapper">
+			<h2>Ведущие торговые системы</h2>
+			<div class="leading_items">
+
+				<div class="leading_item">
+					<div class="leading_item_content">
+						<a href="" class="leading_item_content__logo">
+							<img src="img/logo1.jpg" alt="">
+						</a>
+						<div class="leading_item_info">
+							<p class="leading_item_info__changes">241% <img src="img/leading_up.svg" alt="up"></p>
+							<h5 class="leading_item_info__name">Alpha Strategy</h5>
+							<p class="leading_item_info__history">Торговая история:</p>
+							<p class="leading_item_info__old">2 года</p>
+						</div>
 					</div>
 					<div class="leading_item_actions">
-						<a href="">Подробнее</a>
-						<a href="">Обсудить</a>
+						<a href="" class="leading_item__more"><img src="img/ellipsis.svg" alt="ellipsis">Подробнее</a>
+						<a href=""><img src="img/discuss.svg" alt="discuss">Обсудить</a>
 					</div>
 				</div>
+
+				<div class="leading_item">
+					<div class="leading_item_content">
+						<a href="" class="leading_item_content__logo">
+							<img src="img/logo1.jpg" alt="">
+						</a>
+						<div class="leading_item_info">
+							<p class="leading_item_info__changes">241% <img src="img/leading_up.svg" alt="up"></p>
+							<h5 class="leading_item_info__name">Alpha Strategy</h5>
+							<p class="leading_item_info__history">Торговая история:</p>
+							<p class="leading_item_info__old">2 года</p>
+						</div>
+					</div>
+					<div class="leading_item_actions">
+						<a href="" class="leading_item__more"><img src="img/ellipsis.svg" alt="ellipsis">Подробнее</a>
+						<a href=""><img src="img/discuss.svg" alt="discuss">Обсудить</a>
+					</div>
+				</div>
+
+				<div class="leading_item">
+					<div class="leading_item_content">
+						<a href="" class="leading_item_content__logo">
+							<img src="img/logo1.jpg" alt="">
+						</a>
+						<div class="leading_item_info">
+							<p class="leading_item_info__changes">241% <img src="img/leading_up.svg" alt="up"></p>
+							<h5 class="leading_item_info__name">Alpha Strategy</h5>
+							<p class="leading_item_info__history">Торговая история:</p>
+							<p class="leading_item_info__old">2 года</p>
+						</div>
+					</div>
+					<div class="leading_item_actions">
+						<a href="" class="leading_item__more"><img src="img/ellipsis.svg" alt="ellipsis">Подробнее</a>
+						<a href=""><img src="img/discuss.svg" alt="discuss">Обсудить</a>
+					</div>
+				</div>
+
 			</div>
+			<button class="red-btn">Показать еще</button>
 		</div>
-		<button class="red-btn">Показать еще</button>
 	</section>
 
-	<section class="last-blog">
+	<section class="last-blog wrapper">
+		<h2>Последнее из блога компаний</h2>
 		<div class="last-blog_left">
 			<ul class="last-blog_tab-links">
 				<li><a href="">Компания 1</a></li>
@@ -128,30 +169,35 @@
 		</div>
 	</section>
 
-	<section class="stocks">
+	<section class="stocks wrapper">
 		<div class="stocks_head section_head">
 			<h2>Акции</h2>
       <div class="stocks_head_actions">
-      	<p class="stocks_result"><span>160</span>Результатов всего</p>
+      	<p class="stocks_result"><span class="bold">160 </span> Результатов всего</p>
 				<select class="stocks_languages">
 					<option value="">Все</option>
 					<option value="" selected>США</option>
 					<option value="">Россия</option>
 				</select>
 				<div class="stocks_slider_btn">
-					<a href="">Предыдущие</a>
-					<a href="">Следующие</a>
+					<a href="" class="prev-arrow"><img src="img/prev_arrow.svg" alt="prev">Предыдущие</a>
+					<a href="" class="next-arrow">Следующие<img src="img/next_arrow.svg" alt="next"></a>
 				</div>
 				<a href="" class="red-btn">Показать все</a>
       </div>
 		</div>
 		<div class="stocks_body">
 			<div class="stocks_item">
-				<img src="" class="stocks_item__logo" alt="">
-				<p>axp
-					<span>American Express Co</span>
+				<img src="img/stocks1.jpg" class="stocks_item__logo" alt="axp">
+				<p class="stocks_item__title">
+					<span class="stocks_item__name">axp</span>
+					<span class="stocks_item__from">American Express Co</span>
 				</p>
-				<p>></p>
+				<div class="stocks_item__arrow">
+					<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.999999 1L7 7L1 13" stroke="#6D8088" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -161,17 +207,25 @@
 	</section>
 
 	<section class="brokers">
-		<div class="section_head">
-			<h2>Лицензированные брокеры ЦБ РФ</h2>
-		</div>
-		<div class="brokers_body">
-			<div class="brokers_item">
-				<img src="" alt="">
-				<div class="brokers_item__text">
-					<h6>Альфа-Форекс</h6>
-					<p>Это российское лицензирование, узкие спреды и принадлежность к бренду с безупречной деловой репутацией. Предоставляет актуальную аналитику и обеспечивает профессиональную клиентскую поддержку. Совершенствование продуктов и сервисов — одно из основных направлений стратегии развития.</p>
+		<div class="wrapper">
+			<div class="section_head">
+				<h2>Лицензированные брокеры ЦБ РФ</h2>
+			</div>
+			<div class="brokers_body">
+				<div class="brokers_item">
+					<img src="img/alfa.svg" alt="альфа форекс">
+					<div class="brokers_item__text">
+						<h6 class="bold">Альфа-Форекс</h6>
+						<p>Это российское лицензирование, узкие спреды и принадлежность к бренду с безупречной деловой репутацией. Предоставляет актуальную аналитику и обеспечивает профессиональную клиентскую поддержку. Совершенствование продуктов и сервисов — одно из основных направлений стратегии развития.</p>
+					</div>
 				</div>
-
+				<div class="brokers_item">
+					<img src="img/finam.png" alt="finam">
+					<div class="brokers_item__text">
+						<h6 class="bold">Финам</h6>
+						<p>Является ведущим игроком на финансовом рынке России. Компания придерживается высоких стандартов деятельности на международном валютном рынке. Деятельность «ФИНАМ ФОРЕКС» регулируется российским законодательством, услуги предоставляются на основании лицензии Центрального Банка Российской Федерации.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -189,7 +243,7 @@
 	</section>
 
 
-	<section class="wffw">
+	<section class="wffw wrapper">
 		<h2></h2>
 		<p>WFFW.info Это финансовый портал, который был основан в 2009 году. За 11 лет наш проект посетили миллионы людей. На wffw.info вы можете найти информацию о финансовых рынках. Мы предоставляем информацию и котировки по валютному рынку, фондовому рынку Росси, США, Европы, Азии, товарным рынкам ( золото, нефть, серебро и.т.д ) и криптовалютам.</p>
 		<p>Проект wffw.info предоставляет сервис блогов для бизнеса. Мы приглашаем к сотрудничеству предприятия из сферы финансов ( банки, брокеры, платежные системы, аналитические агентства ). Запустите блог вашей компании у нас на сайте! Это бесплатно. Публикуйте интересный контент и привлекайте новых клиентов в ваш бизнес.</p>
