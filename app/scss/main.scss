@@ -538,6 +538,70 @@ nav {
 	}
 }
 
+// wffw
+
+.wffw {
+	padding: 50px 0 70px;
+
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	p {
+		margin-bottom: 20px;
+		line-height: 1.3;
+		font-size: 14px;
+	}
+}
+
+// footer
+
+footer {
+
+	.footer-statistic {
+		background-color: #000;
+
+		.statistic_item {
+
+			.statistic_item_img {
+				position: relative;
+				min-height: 55px;
+				width: 120px;
+				text-align: center;
+
+				&::after {
+					content: "";
+			    position: absolute;
+			    width: 21px;
+			    height: 41px;
+			    background-image: url(../img/wings-r.png);
+			    top: 0px;
+			    right: 0;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 21px;
+					height: 41px;
+					background-image: url(../img/wings-l.png);
+					top: 0px;
+					left: 0;
+				}
+
+				span {
+					font-size: 24px;
+					color: #fff;
+			    padding: 5px 0;
+					box-sizing: border-box;
+					border-top: 2px solid #ffc600;
+					border-bottom: 2px solid #ffc600;
+				}
+			}
+		}
+	}
+}
+
 
 
 
