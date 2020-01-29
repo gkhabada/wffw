@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="path/to/image.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
 	<link rel="icon" href="img/favicon/favicon.ico">
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -23,8 +24,13 @@
 				<img src="img/lang-ru.png" alt="ru">
 				<p>Русский</p>
 				<span></span>
+
+				<div class="choose-language__select">
+					<a href="" class="choose-language__item choose-language_active">Русский</a>
+					<a href="" class="choose-language__item">Английский</a>
+				</div>
 			</div>
-			<a href="#" class="header_choose-broker">Выбрать брокера</a>
+			<a href="#" class="header_choose-broker"><img src="img/setting.svg" alt="choolse">Выбрать брокера</a>
 			<p class="header_old">
 				<span class="header_old_number bold">11</span>
 				<span class="header_old_text">Лет в сфере финансов</span>
@@ -127,46 +133,69 @@
 				</div>
 
 			</div>
-			<button class="red-btn">Показать еще</button>
+			<button class="red-btn leading_show-more">Показать еще</button>
 		</div>
 	</section>
 
 	<section class="last-blog wrapper">
 		<h2>Последнее из блога компаний</h2>
-		<div class="last-blog_left">
-			<ul class="last-blog_tab-links">
-				<li><a href="">Компания 1</a></li>
-				<li><a href="">Компания 2</a></li>
-				<li><a href="">Компания 3</a></li>
-				<li><a href="">Компания 4</a></li>
-				<li><a href="">Компания 5</a></li>
-				<li><a href="">Компания 6</a></li>
-				<li><a href="">Компания 7</a></li>
-				<li><a href="">Компания 8</a></li>
-				<li><a href="">Компания 9</a></li>
-				<li><a href="">Компания 10</a></li>
-				<li><a href="">Компания 11</a></li>
-				<li><a href="">Компания 12</a></li>
-				<li><a href="">Компания 13</a></li>
-				<li><a href="">Компания 14</a></li>
-				<li><a href="">Компания 15</a></li>
-				<li><a href="">Компания 16</a></li>
-				<li><a href="">Компания 17</a></li>
-				<li><a href="">Компания 18</a></li>
-				<li><a href="">Компания 19</a></li>
-				<li><a href="">Компания 20</a></li>
-			</ul>
-		</div>
-		<div class="last-blog_center">
 
-		</div>
-		<div class="last-blog_right">
-			<p class="other-news_title"></p>
-			<div class="other-news">
-				<time>24.01.2020</time>
-				<h4 class="other-news_title">Заголовок статьи статьи 1 в два этажа <span>> </span></h4>
+		<div class="last-blog__content news">
+			<div class="last-blog_left">
+				<ul class="last-blog_tab-links">
+					<li class="active_tab"><a href="">Показать все </a></li>
+					<li><a href="">Альфа</a></li>
+					<li><a href="">Финам</a></li>
+					<li><a href="">Компания 2</a></li>
+					<li><a href="">Компания 3</a></li>
+					<li><a href="">Компания 4</a></li>
+					<li><a href="">Компания 5</a></li>
+					<li><a href="">Компания 6</a></li>
+					<li><a href="">Компания 7</a></li>
+					<li><a href="">Компания 8</a></li>
+					<li><a href="">Компания 9</a></li>
+					<li><a href="">Компания 10</a></li>
+					<li><a href="">Компания 11</a></li>
+					<li><a href="">Компания 12</a></li>
+					<li><a href="">Компания 13</a></li>
+					<li><a href="">Компания 14</a></li>
+					<li><a href="">Компания 15</a></li>
+					<li><a href="">Компания 16</a></li>
+					<li><a href="">Компания 17</a></li>
+					<li><a href="">Компания 18</a></li>
+					<li><a href="">Компания 19</a></li>
+					<li><a href="">Компания 20</a></li>
+				</ul>
+			</div>
+
+			<div class="last-blog_center">
+				  <div class="news__last last-blog__news">
+				  	<div class="news__type">
+				  		<img src="img/alfa.svg" alt="">
+							<div class="news__title">
+								<time class="news_time">24.01.2020</time>
+								<h3 class="news_name">Заголовок статьи</h3>
+							</div>
+				  	</div>
+						<div class="news__content">
+							<img src="img/news.png" class="news__content_img" alt="">
+							<div>
+								<p class="news_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh molestie et viverra rhoncus lacinia amet. Ut at pellentesque diam...</p>
+								<a href="" class="news__read-more">Читать далее <img src="img/bracket-r.svg" alt="read"></a>
+							</div>
+						</div>
+				  </div>
+			</div>
+
+			<div class="last-blog_right">
+				<p class="other-news__title">Другие новости:</p>
+				<div class="other-news">
+					<time class="news_time">24.01.2020</time>
+					<h4 class="news_name">Заголовок статьи статьи 1 в два этажа <img src="img/bracket-r.svg" alt="read"></h4>
+				</div>
 			</div>
 		</div>
+
 	</section>
 
 	<section class="stocks wrapper">
@@ -242,7 +271,6 @@
 
 	</section>
 
-
 	<section class="wffw wrapper">
 		<h2>О нашем проекте:</h2>
 		<p>WFFW.info Это финансовый портал, который был основан в 2009 году. За 11 лет наш проект посетили миллионы людей. На wffw.info вы можете найти информацию о финансовых рынках. Мы предоставляем информацию и котировки по валютному рынку, фондовому рынку Росси, США, Европы, Азии, товарным рынкам ( золото, нефть, серебро и.т.д ) и криптовалютам.</p>
@@ -259,6 +287,30 @@
 					</div>
 					<p class="statistic_item_text">Мы привлекли более 3000 трейдеров на финансовые рынки</p>
 	      </div>
+				<div class="statistic_item">
+					<div class="statistic_item_img">
+						<img src="img/alpari.png" alt="alpari">
+					</div>
+					<p class="statistic_item_text">Лучшие партнеры Альпари 2012 года</p>
+	      </div>
+				<div class="statistic_item">
+					<div class="statistic_item_img">
+						<span>16</span>
+					</div>
+					<p class="statistic_item_text">Работаем с 16 крупнейшими финансовыми компаниями</p>
+	      </div>
+				<div class="statistic_item">
+					<div class="statistic_item_img">
+						<img src="img/foreks.png" alt="foreks">
+					</div>
+					<p class="statistic_item_text">Лучшие партнеры Альфа форекс 2015</p>
+	      </div>
+				<div class="statistic_item">
+					<div class="statistic_item_img">
+						<span>10000</span>
+					</div>
+					<p class="statistic_item_text">Нас посещает около 10 000 человек в день</p>
+	      </div>
 			</div>
 		</div>
 
@@ -274,6 +326,40 @@
 						<li><a href="">Торговля акциями</a></li>
 					</ul>
 				</div>
+
+				<div class="links_item">
+					<p>О НАС</p>
+					<ul>
+						<li><a href="">Партнерство для Брокеров</a></li>
+						<li><a href="">Рекламным и пиар агентствам</a></li>
+					</ul>
+				</div>
+
+				<div class="links_item">
+					<p>ИНВЕСТИЦИИ</p>
+					<ul>
+						<li><a href="">Памм-счета</a></li>
+						<li><a href="">Рейтинг памм сервисов</a></li>
+						<li><a href="">Share4you</a></li>
+						<li><a href="">CopyFX</a></li>
+						<li><a href="">ForexCopy</a></li>
+						<li><a href="">WhotradesНов</a></li>
+					</ul>
+				</div>
+
+				<div class="links_item">
+					<p>НОВОСТИ</p>
+					<ul>
+						<li><a href="">Новости фондовго рынка</a></li>
+						<li><a href="">Новости России/Рубль</a></li>
+						<li><a href="">Мировая экономика</a></li>
+						<li><a href="">Европа</a></li>
+						<li><a href="">США</a></li>
+						<li><a href="">Аналитика Рынка форекс</a></li>
+					</ul>
+				</div>
+
+
 			</div>
 		</div>
 

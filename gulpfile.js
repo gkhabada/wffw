@@ -42,9 +42,7 @@ gulp.task('styles', function() {
 
 // JS
 gulp.task('scripts', function() {
-	return gulp.src([
-		'app/js/index.js',
-		])
+	return gulp.src('app/js/index.js')
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
@@ -113,7 +111,7 @@ gulp.task('cleanimg', function() {
 
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
-		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
+		gulp.watch('app/js/index.js', gulp.parallel('scripts'));
 		gulp.watch('app/*.html', gulp.parallel('code'));
 
 		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img'));  // GraphicsMagick watching image sources if allowed.
