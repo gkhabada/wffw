@@ -102,7 +102,7 @@ header {
 			 p {
 				 margin: 0 10px;
 			 }
-  
+
 			 span {
 					display: block;
 					width: 4px;
@@ -366,8 +366,16 @@ nav {
 						margin-bottom: 5px;
 						font-weight: bold;
 						font-size: 16px;
-						line-height: 22px;
-						color: #111111;
+
+						a {
+							color: #111111;
+							line-height: 22px;
+							transition: 0.3s;
+
+							&:hover {
+								color: $red;
+							}
+						}
 					}
 
 					.leading_item_info__history {
@@ -468,14 +476,20 @@ nav {
 
 			.last-blog_tab-links li {
 				display: block;
-				margin-bottom: 19px;
+				margin-bottom: 15px;
 				position: relative;
 
 				a {
 					font-weight: 600;
+					height: 100%;
+					display: block;
 					font-size: 14px;
-					line-height: 24px;
+					line-height: 2.5;
 					color: #6D8088;
+
+					&:hover {
+						color: $red;
+					}
 				}
 
 				span {
@@ -499,6 +513,8 @@ nav {
 
 		.last-blog_center {
 			flex: 1;
+			max-height: 600px;
+			overflow-y: hidden;
 
 			.news__last {
 				margin-bottom: 20px;
@@ -616,20 +632,34 @@ nav {
 			    display: inline-block;
 					padding: 0 15px;
 					color: #394748;
+					transition: 0.4s;
+
+					svg {
+						position: relative;
+						top: 7px;
+
+						path {
+							transition: 0.4s;
+						}
+					}
 
 					&:hover {
 						color: $red;
+
+						svg path{
+							stroke: $red;
+						}
 					}
 				}
 
 				.prev-arrow {
 					border-right: 2px solid #C5D5DC;
-					img {
+					svg {
 						margin-right: 14px;
 					}
 				}
 
-				.next-arrow img {
+				.next-arrow svg {
 					margin-left: 14px;
 				}
 			}
