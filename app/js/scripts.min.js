@@ -55,5 +55,55 @@ $('body')
         }
       });
     }
-    console.log(dataShow)
   })
+
+
+  // stocks
+
+
+  let stocksCount = $('.stocks .stocks_item').length
+
+for (let i = 12; i < stocksCount; i++) {
+  $('.stocks .stocks_item').eq(i).hide();
+}
+
+
+
+// mobile menu
+
+$('.mobile-header__burger').on('click', function() {
+  // $('.mobile-menu').css('left', '0');
+  $('.mobile-menu').css('display', 'flex');
+  $('#wrapper').css('overflow-x', 'hidden');
+
+  $('section, footer').css({
+    'transform': 'translateX(calc(100vw - 92px))'
+  });
+});
+
+function closeMobileMenu () {
+  $('.mobile-menu').css('display', 'none');
+  $('section, footer').css('transform', 'translateX(0)');
+
+}
+$('.mobile-menu__close, section, footer').on('click', function () {
+  closeMobileMenu();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
