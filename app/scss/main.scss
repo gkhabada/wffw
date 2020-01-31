@@ -226,9 +226,9 @@ nav {
 // mobile-header
 
 .mobile-header {
+	display: none;
 	background-color: #fff;
 	padding: 16px;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
@@ -829,10 +829,6 @@ nav {
 
 					&:hover {
 						color: $red;
-
-						svg path{
-							stroke: $red;
-						}
 					}
 				}
 
@@ -845,6 +841,10 @@ nav {
 
 				.next-arrow svg {
 					margin-left: 14px;
+				}
+
+				.can-arrow svg path {
+					stroke: $red;
 				}
 			}
 
@@ -918,6 +918,7 @@ nav {
 
 		.brokers_item {
 			display: flex;
+			align-items: flex-start;
 			margin-bottom: 45px;
 
 			.brokers_item__text {

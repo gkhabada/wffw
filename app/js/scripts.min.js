@@ -61,11 +61,170 @@ $('body')
   // stocks
 
 
-  let stocksCount = $('.stocks .stocks_item').length
+  let stocksCount = $('.stocks .stocks_item').length;
+  let slideCount = Math.ceil(stocksCount / 12);
+  let prevBtn = $('.stocks .prev-arrow');
+  let nextBtn = $('.stocks .next-arrow');
+  let countShow = 16;
+  let currentSlide = 1;
 
-for (let i = 12; i < stocksCount; i++) {
-  $('.stocks .stocks_item').eq(i).hide();
-}
+  for (let i = countShow; i < stocksCount; i++) {
+    $('.stocks .stocks_item').eq(i).hide();
+  }
+
+
+//
+  let allSLides = [];
+
+  for (var i = 0; i < slideCount; i++) {
+    allSLides[i] = []
+
+    for (var i = 0; i < countShow; i++) {
+      allSLides.push($('.stocks .stocks_item')[i])
+    }
+
+  }
+
+  console.log(allSLides)
+
+  //
+
+  nextBtn.on('click', function (e) {
+    e.preventDefault();
+
+    if(slideCount > 1 && currentSlide !== slideCount) {
+      currentSlide++;
+      prevBtn.addClass('can-arrow')
+
+      if (currentSlide === slideCount) {
+        nextBtn.removeClass('can-arrow')
+      }
+
+    }
+  })
+
+  prevBtn.on('click', function (e) {
+    e.preventDefault();
+
+    if(currentSlide !== 1) {
+      currentSlide--;
+      nextBtn.addClass('can-arrow')
+
+      if(currentSlide === 1) {
+        prevBtn.removeClass('can-arrow')
+      }
+
+    }
+  })
+
+
+
+
+
+
+
+
+
+ //  function Slider(obj) {
+ //   this.images = document.querySelectorAll(obj.images);
+ //   this.auto = obj.auto;
+ //   this.btnPrev = obj.btnPrev;
+ //   this.btnNext = obj.btnNext;
+ //   this.rate = obj.rate || 1000;
+ //   this.count = obj.count || 1;
+ //
+ //   if (obj.dots) {
+ //     document.querySelector(obj.dots).innerHTML = '';
+ //     for (let j = 0; j < this.images.length; j++) {
+ //       let span = document.createElement('span');
+ //       document.querySelector(obj.dots).appendChild(span);
+ //       this.images[j].classList.remove('showed');
+ //     }
+ //     document.querySelector(obj.dots + ' span').classList.add('active');
+ //     this.images[0].classList.add('showed');
+ //     this.dots = document.querySelector(obj.dots).childNodes;
+ //   }
+ //
+ //   var i = 0;
+ //   var slider = this;
+ //   this.prev = function() {
+ //     slider.images[i].classList.remove('showed');
+ //     slider.dots[i].classList.remove('active');
+ //     i--;
+ //
+ //     if (i < 0) {
+ //       i = slider.images.length - 1;
+ //     }
+ //
+ //     slider.images[i].classList.add('showed');
+ //
+ //     if (slider.dots) {
+ //       slider.dots[i].classList.add('active');
+ //     }
+ //   }
+ //   this.next = function() {
+ //     slider.images[i].classList.remove('showed');
+ //     slider.dots[i].classList.remove('active');
+ //     i++;
+ //
+ //     if (i >= slider.images.length) {
+ //       i = 0;
+ //     }
+ //
+ //     slider.images[i].classList.add('showed');
+ //
+ //     if (slider.dots) {
+ //       slider.dots[i].classList.add('active');
+ //     }
+ //   }
+ //   document.querySelector(slider.btnPrev).onclick = slider.prev;
+ //   document.querySelector(slider.btnNext).onclick = slider.next;
+ //
+ //   var touchCoord = 0;
+ //   $(obj.images).on('mousedown touchstart', function(e) {
+ //     e.preventDefault();
+ //     slideRates = true;
+ //     if (e.touches) {e = e.touches[0]}
+ //     touchCoord = e.clientX
+ //   });
+ //
+ //
+ //   $(obj.images).on('mousemove touchmove', function(e) {
+ //     e.preventDefault();
+ //     if (slideRates !== false) {
+ //       if (e.touches) {e = e.touches[0]}
+ //       if (touchCoord + 80 < e.clientX) {
+ //         slider.prev();
+ //         slideRates = false;
+ //       } else if (touchCoord - 80 > e.clientX) {
+ //         slider.next();
+ //         slideRates = false;
+ //       }
+ //
+ //     };
+ //   });
+ //
+ //   if (slider.auto) {
+ //     setInterval(slider.next, slider.rate);
+ //   }
+ // }
+ //
+ // var slideRates = false;
+ // function initRatesSlider () {
+ //   if ($(window).width() <= 768 && $('.rates').length) {
+ //     new Slider({
+ //       images: '.stocks .stocks_item',
+ //       btnPrev: '.stocks .prev-arrow',
+ //       btnNext: '.stocks .next-arrow',
+ //       auto: false,
+ //     });
+ //   }
+ // }
+ // initRatesSlider();
+ //
+ // $(window).resize(function() {
+ //   initRatesSlider();
+ // });
 
 
 
