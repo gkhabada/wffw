@@ -413,7 +413,7 @@ nav {
 
 .firts-block {
 		background-image: url('../img/banner.jpg');
-		background-position: center;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-top: 190px;
@@ -802,6 +802,7 @@ nav {
 
 .currency {
 	margin-top: 55px;
+	overflow-x: hidden;
 
 	.currency_head {
 		display: flex;
@@ -819,23 +820,23 @@ nav {
 		.currency_head_actions {
 			display: flex;
 			align-items: center;
-			margin-left: auto;
 
 			.currency_country {
 				border: 2px solid #C5D5DC;
 				box-sizing: border-box;
 				border-radius: 6px;
 				padding-left: 10px;
-				padding-right: 10px;
+				padding-right: 15px;
 				width: 150px;
 				height: 44px;
 				margin-right: 30px;
+				cursor: pointer;
 
 				-webkit-appearance: none;
 			  -moz-appearance: none;
 			  appearance: none;
-				background-image: url(../img/bracket-r.svg);
-				background-position: calc(100% - 20px) center;
+				background-image: url(../img/select_arr.svg);
+				background-position: calc(100% - 15px) center;
 				background-repeat: no-repeat;
 			}
 
@@ -894,9 +895,10 @@ nav {
 	.currency_body {
 		margin-top: 40px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: flex-start;
 		flex-wrap: wrap;
+		width: calc(100% + 27px);
 
 		.currency_item {
 			width: 258px;
@@ -908,7 +910,8 @@ nav {
 			transition: 0.4s;
 			display: flex;
 			align-items: center;
-			margin: 0 5px 30px;
+			margin-right: 27px;
+			margin-bottom: 30px;
 
 			&:hover {
 				border-color: $red;
@@ -1184,27 +1187,6 @@ footer {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @import "media"; // Always at the end

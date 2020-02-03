@@ -33,9 +33,15 @@ function showLeadingItems(count) {
           $($('.leading_item')[i]).show();
         }
         i = j + count;
+        if (i >= leadingCount) {
+          $('.leading_show-more').hide();
+        }
       }
     })
 
+  } else {
+    console.log(1)
+    $('.leading_show-more').hide();
   }
 }
 
@@ -229,7 +235,7 @@ function adaptiveSlider() {
     sliderInits(4);
   } else if (window.innerWidth < 850) {
     sliderInits(8);
-  } else if (window.innerWidth < 1120) {
+  } else if (window.innerWidth < 1150) {
     sliderInits(12);
   } else {
     sliderInits(16);
