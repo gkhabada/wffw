@@ -656,11 +656,25 @@ nav {
 			padding-right: 23px;
 			box-sizing: border-box;
 			max-height: 550px;
-			overflow-y: auto;
+			overflow-x: hidden;
 
-			&::-webkit-scrollbar { width: 3px; }
-			&::-webkit-scrollbar-track-piece { background-color: #EEF3F8;}
-			&::-webkit-scrollbar-thumb { background-color: #CFD4DA; border-radius: 10px;}
+			// overflow-y: auto;
+			// &::-webkit-scrollbar { width: 3px; }
+			// &::-webkit-scrollbar-track-piece { }
+			// &::-webkit-scrollbar-thumb { }
+
+			.simplebar-scrollbar {
+				background-color: #CFD4DA;
+				border-radius: 10px;
+			}
+
+			.simplebar-track {
+				background-color: #EEF3F8;
+				width: 3px;
+				border-radius: 10px;
+			}
+
+
 
 			.last-blog_select {
 				display: none;
@@ -694,6 +708,7 @@ nav {
 					font-size: 14px;
 					line-height: 2.5;
 					color: #6D8088;
+					outline: none;
 
 					&:hover {
 						color: $red;
@@ -732,6 +747,7 @@ nav {
 					margin-bottom: 10px;
 
 					img {
+						flex-shrink: 0;
 						margin-right: 32px;
 						width: 98px;
 						height: 42px;
@@ -742,11 +758,13 @@ nav {
 					display: flex;
 
 					.news__content_img {
+						flex-shrink: 0;
 						margin-right: 32px;
 						width: 98px;
 						height: 70px;
 						object-fit: cover;
 						object-position: center;
+						border-radius: 4px;
 					}
 
 					.news_text {
@@ -1020,6 +1038,10 @@ nav {
 			display: flex;
 			align-items: flex-start;
 			margin-bottom: 45px;
+
+			img {
+				flex-shrink: 0;
+			}
 
 			.brokers_item__text {
 				margin-left: 96px;

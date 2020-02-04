@@ -1,3 +1,16 @@
+// custom scrooll
+
+
+new SimpleBar($('.last-blog_left')[0], {
+  autoHide: false
+});
+
+new SimpleBar($('.other-news__items')[0], {
+  // autoHide: false
+});
+
+
+
 // toggle language select
 
 $('body')

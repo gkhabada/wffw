@@ -24,13 +24,29 @@
 				padding: 16px 16px 0;
 				box-sizing: border-box;
 
-				.other-news__items {
+				.other-news__items, .simplebar-content {
 					display: flex;
 					align-items: stretch;
-					overflow-x: auto;
-					&::-webkit-scrollbar { height: 3px; }
-					&::-webkit-scrollbar-track-piece { background-color: #EEF3F8;}
-					&::-webkit-scrollbar-thumb { background-color: #CFD4DA; border-radius: 10px;}
+					overflow-y: hidden;
+
+					// overflow-x: auto;
+					// &::-webkit-scrollbar { height: 3px; }
+					// &::-webkit-scrollbar-track-piece { background-color: #EEF3F8;}
+					// &::-webkit-scrollbar-thumb { background-color: #CFD4DA; border-radius: 10px;}
+				}
+
+				.simplebar-scrollbar {
+					// background-color: #CFD4DA;
+					// border-radius: 5px;
+
+					background-color: transparent;
+				}
+
+				.simplebar-track {
+					// background-color: #EEF3F8;
+					// height: 5px;
+					// border-radius: 5px;
+					background-color: transparent;
 				}
 
 				.other-news {

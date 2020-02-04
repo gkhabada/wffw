@@ -73,14 +73,14 @@ gulp.task('code', function() {
 
 
 gulp.task('imgmin', function() {
-	return gulp.src('app/img/_src/*')
-	.pipe(imagemin([
-		imagemin.gifsicle({interlaced: true}),
-		imagemin.jpegtran({progressive: true}),
-		imagemin.optipng({optimizationLevel: 5}),
-		imagemin.svgo({plugins: [{removeViewBox: false}]})
-	]))
-	.pipe(gulp.dest('app/img'))
+	// return gulp.src('app/img/_src/*')
+	// .pipe(imagemin([
+	// 	imagemin.gifsicle({interlaced: true}),
+	// 	imagemin.jpegtran({progressive: true}),
+	// 	imagemin.optipng({optimizationLevel: 5}),
+	// 	imagemin.svgo({plugins: [{removeViewBox: false}]})
+	// ]))
+	// .pipe(gulp.dest('app/img'))
 });
 
 // Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)

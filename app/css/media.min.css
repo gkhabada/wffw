@@ -26,7 +26,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .last-blog .last-blog__content .last-blog_right .other-news__items {
+  .last-blog .last-blog__content .last-blog_right .other-news__items, .last-blog .last-blog__content .last-blog_right .simplebar-content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -35,17 +35,13 @@
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    overflow-x: auto;
+    overflow-y: hidden;
   }
-  .last-blog .last-blog__content .last-blog_right .other-news__items::-webkit-scrollbar {
-    height: 3px;
+  .last-blog .last-blog__content .last-blog_right .simplebar-scrollbar {
+    background-color: transparent;
   }
-  .last-blog .last-blog__content .last-blog_right .other-news__items::-webkit-scrollbar-track-piece {
-    background-color: #EEF3F8;
-  }
-  .last-blog .last-blog__content .last-blog_right .other-news__items::-webkit-scrollbar-thumb {
-    background-color: #CFD4DA;
-    border-radius: 10px;
+  .last-blog .last-blog__content .last-blog_right .simplebar-track {
+    background-color: transparent;
   }
   .last-blog .last-blog__content .last-blog_right .other-news {
     margin-bottom: 20px;
