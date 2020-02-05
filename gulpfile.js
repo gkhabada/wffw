@@ -73,7 +73,7 @@ gulp.task('code', function() {
 
 
 gulp.task('imgmin', function() {
-	return gulp.src('app/img/_src/*')
+	return gulp.src('app/source_img/*')
 	.pipe(imagemin([
 		imagemin.gifsicle({interlaced: true}),
 		imagemin.jpegtran({progressive: true}),
@@ -114,8 +114,8 @@ gulp.task('cleanimg', function() {
 		gulp.watch('app/js/index.js', gulp.parallel('scripts'));
 		gulp.watch('app/*.html', gulp.parallel('code'));
 
-		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img'));  // GraphicsMagick watching image sources if allowed.
-		!gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('imgmin'));  // ! GraphicsMagick watching image sources if allowed.
+		// gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img'));  // GraphicsMagick watching image sources if allowed.
+		!gmWatch && gulp.watch('app/img/source_img/**/*', gulp.parallel('cleanimg', 'imgmin'));  // ! GraphicsMagick watching image sources if allowed.
 	});
 	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch'))
 					: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
