@@ -15,11 +15,13 @@
   <link rel="stylesheet" href="css/strategies.min.css">
 </head>
 <body>
-  <div id="wrapper">
+  <div id="wrapper" class="inner-page">
 
     <header>
       <div class="header wrapper">
-         <img src="img/logo.svg" alt="" class="header__logo">
+         <a href="index.html">
+           <img src="img/logo.svg" alt="Логотип" class="header__logo">
+         </a>
          <form action="" class="header__search">
            <input type="search" placeholder="Что ищем?" required>
            <button>Найти <img src="img/next_arrow-w.svg" alt=""></button>
@@ -32,18 +34,19 @@
       <nav>
         <div class="nav wrapper">
           <ul class="nav__items">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="">Брокеры</a></li>
+            <li><a href="">Банки</a></li>
+            <li><a href="">Инвестиции</a></li>
+            <li><a href="">Форекс</a></li>
+            <li><a href="">Акции</a></li>
+            <li><a href="">Сырье</a></li>
+            <li><a href="">Индексы</a></li>
+            <li><a href="">Валюты</a></li>
+            <li><a href="">Криптовалюты</a></li>
           </ul>
-          <span class="nav__course">Курс RU / USD <img src="img/bracket-r.svg" alt=""></span>
+          <a href="" class="nav__course">  Курс RU / USD <img src="img/bracket-r.svg" alt="Курс"></a>
+
         </div>
       </nav>
     </header>
@@ -104,7 +107,7 @@
 
     </div>
 
-    <div class="inner-page wrapper">
+    <div class="wrapper">
 
       <ul class="breadcrumbs">
         <li>
@@ -123,19 +126,19 @@
           <div class="strategies__head_actions">
             <div class="strategies__head_sort">
               <label for="strategies-select" class="strategies__head_label">Сортировать по:</label>
-              <select id="strategies-select" class="" name="">
+              <select id="strategies-select" class="strategies__head_select" name="">
                 <option value="">Популярности</option>
                 <option value="">Новизне</option>
               </select>
             </div>
             <div class="strategies__head_display">
               <span class="strategies__head_label">Способ отображения:</span>
-              <a href="">
+              <a href="" class="active">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 1H1V8H8V1Z" stroke="#D42A1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M19 1H12V8H19V1Z" stroke="#D42A1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M19 12H12V19H19V12Z" stroke="#D42A1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8 12H1V19H8V12Z" stroke="#D42A1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 1H1V8H8V1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 1H12V8H19V1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 12H12V19H19V12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 12H1V19H8V12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
               <a href="">
@@ -151,12 +154,100 @@
             </div>
           </div>
         </div>
-        <div class="strategies__items">
-
+        <div class="strategies__items half">
+          <div class="strategies__item">
+            <div class="strategies__item_head">
+              <p>Стратегии Торговли</p>
+              <time>24.01.2020</time>
+            </div>
+            <h2 class="strategies__item_title">Migesco: новая торговая платформа и сервисы</h2>
+            <p class="strategies__item_text">Компания Migesco представила трейдерам новую версию платформы для торговли бинарными опционами и внедрила ряд дополнительных сервисов. Разработка компании представляет собой инновационный терминал нового поколения, позволяющий заключать сделки...</p>
+            <div class="strategies__item_footer">
+              <div class="strategies__item_footer--info">
+                <span>
+                  <img src="img/strategies-eye.svg" alt="Просмотры">
+                  Просмотры: 76430
+                </span>
+                <span>
+                  <img src="img/strategies-comment.svg" alt="Комментарии">
+                  5
+                </span>
+              </div>
+              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+            </div>
+          </div>
+          <div class="strategies__item">
+            <div class="strategies__item_head">
+              <p>Стратегии Торговли</p>
+              <time>24.01.2020</time>
+            </div>
+            <h2 class="strategies__item_title">Migesco: новая торговая платформа и сервисы</h2>
+            <p class="strategies__item_text">Компания Migesco представила трейдерам новую версию платформы для торговли бинарными опционами и внедрила ряд дополнительных сервисов. Разработка компании представляет собой инновационный терминал нового поколения, позволяющий заключать сделки...</p>
+            <div class="strategies__item_footer">
+              <div class="strategies__item_footer--info">
+                <span>
+                  <img src="img/strategies-eye.svg" alt="Просмотры">
+                  Просмотры: 76430
+                </span>
+                <span>
+                  <img src="img/strategies-comment.svg" alt="Комментарии">
+                  5
+                </span>
+              </div>
+              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+            </div>
+          </div>
         </div>
+        <!--  -->
+        <div class="strategies__items half">
+          <div class="strategies__item">
+            <div class="strategies__item_head">
+              <p>Стратегии Торговли</p>
+              <time>24.01.2020</time>
+            </div>
+            <h2 class="strategies__item_title">Migesco: новая торговая платформа и сервисы</h2>
+            <p class="strategies__item_text">Компания Migesco представила трейдерам новую версию платформы для торговли бинарными опционами и внедрила ряд дополнительных сервисов. Разработка компании представляет собой инновационный терминал нового поколения, позволяющий заключать сделки...</p>
+            <div class="strategies__item_footer">
+              <div class="strategies__item_footer--info">
+                <span>
+                  <img src="img/strategies-eye.svg" alt="Просмотры">
+                  Просмотры: 76430
+                </span>
+                <span>
+                  <img src="img/strategies-comment.svg" alt="Комментарии">
+                  5
+                </span>
+              </div>
+              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+            </div>
+          </div>
+          <div class="strategies__item">
+            <div class="strategies__item_head">
+              <p>Стратегии Торговли</p>
+              <time>24.01.2020</time>
+            </div>
+            <h2 class="strategies__item_title">Migesco: новая торговая платформа и сервисы</h2>
+            <p class="strategies__item_text">Компания Migesco представила трейдерам новую версию платформы для торговли бинарными опционами и внедрила ряд дополнительных сервисов. Разработка компании представляет собой инновационный терминал нового поколения, позволяющий заключать сделки...</p>
+            <div class="strategies__item_footer">
+              <div class="strategies__item_footer--info">
+                <span>
+                  <img src="img/strategies-eye.svg" alt="Просмотры">
+                  Просмотры: 76430
+                </span>
+                <span>
+                  <img src="img/strategies-comment.svg" alt="Комментарии">
+                  5
+                </span>
+              </div>
+              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <a href="" class="strategies__show-more">
+          <img src="img/bracket-w.svg" alt="">
+          Показать еще</a>
       </div>
     </div>
-
 
     <footer>
       <div class="footer-statistic">
