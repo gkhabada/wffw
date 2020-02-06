@@ -1,15 +1,14 @@
 // custom scrooll
 
+if ($('.last-blog_left').length) {
+  new SimpleBar($('.last-blog_left')[0], {
+    autoHide: false
+  });
+}
 
-new SimpleBar($('.last-blog_left')[0], {
-  autoHide: false
-});
-
-new SimpleBar($('.other-news__items')[0], {
-  // autoHide: false
-});
-
-
+if ($('.other-news__items').length) {
+  new SimpleBar($('.other-news__items')[0]);
+}
 
 // toggle language select
 
@@ -53,7 +52,6 @@ function showLeadingItems(count) {
     })
 
   } else {
-    console.log(1)
     $('.leading_show-more').hide();
   }
 }
@@ -132,8 +130,6 @@ function Slider(obj) {
       checkButtons()
       toSlide()
 
-      console.log(slideCount, currentSlide)
-
     }
   })
 
@@ -146,8 +142,6 @@ function Slider(obj) {
 
       checkButtons()
       toSlide()
-
-console.log(slideCount, currentSlide)
     }
   })
 

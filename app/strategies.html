@@ -52,9 +52,22 @@
     </header>
 
     <div class="mobile-header">
-      <img src="img/burger.svg" alt="menu" class="mobile-header__burger">
-      <img src="img/logo.svg" alt="wffw">
-      <a href=""><img src="img/setting-mob.svg" alt="настройки"></a>
+      <div class="mobile-header__top">
+        <img src="img/burger.svg" alt="menu" class="mobile-header__burger">
+        <img src="img/logo.svg" alt="wffw">
+        <a href="" class="mobile-header__search">
+          <img src="img/search.svg"  alt="поиск">
+          <img src="img/close.svg" alt="закрыть" class="hide">
+        </a>
+      </div>
+
+
+      <form action="" class="mobile-header__search-form">
+        <input type="text" placeholder="Что ищем?">
+        <button name="button">
+          <img src="img/search.svg" alt="искать">
+        </button>
+      </form>
     </div>
 
     <div class="mobile-menu">
@@ -128,12 +141,12 @@
               <label for="strategies-select" class="strategies__head_label">Сортировать по:</label>
               <select id="strategies-select" class="strategies__head_select" name="">
                 <option value="">Популярности</option>
-                <option value="">Новизне</option>
+                <option value="">Типу стратегии</option>
               </select>
             </div>
             <div class="strategies__head_display">
               <span class="strategies__head_label">Способ отображения:</span>
-              <a href="" class="active">
+              <div><a href="" class="active">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 1H1V8H8V1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M19 1H12V8H19V1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -151,6 +164,7 @@
                   <path d="M5 13H18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
+            </div>
             </div>
           </div>
         </div>
@@ -173,7 +187,7 @@
                   5
                 </span>
               </div>
-              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+              <a href="" class="strategies__item_footer--read-more"><span>Читать</span> <img src="img/bracket-r.svg" alt=""></a>
             </div>
           </div>
           <div class="strategies__item">
@@ -194,7 +208,7 @@
                   5
                 </span>
               </div>
-              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+              <a href="" class="strategies__item_footer--read-more"><span>Читать</span> <img src="img/bracket-r.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -218,7 +232,7 @@
                   5
                 </span>
               </div>
-              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+              <a href="" class="strategies__item_footer--read-more"><span>Читать</span> <img src="img/bracket-r.svg" alt=""></a>
             </div>
           </div>
           <div class="strategies__item">
@@ -239,7 +253,7 @@
                   5
                 </span>
               </div>
-              <a href="" class="strategies__item_footer--read-more">Читать <img src="img/bracket-r.svg" alt=""></a>
+              <a href="" class="strategies__item_footer--read-more"><span>Читать</span> <img src="img/bracket-r.svg" alt=""></a>
             </div>
           </div>
         </div>
