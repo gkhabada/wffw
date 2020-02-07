@@ -1240,3 +1240,193 @@ a {
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
+
+.article-page__aside > div:not(:last-child) {
+  border-bottom: 1px solid #D3DFE3;
+}
+
+.article-page__aside_title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #6D8088;
+}
+
+.article-page__aside__companies {
+  padding: 39px 30px 45px;
+}
+
+.article-page__aside__companies .aside__companies__link {
+  font-size: 14px;
+  color: #d42a1f;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.article-page__aside__companies .aside__companies__link:hover {
+  color: #0066d3;
+}
+
+.article-page__aside__companies .aside__companies__items li {
+  margin-top: 30px;
+}
+
+.article-page__aside__companies .aside__companies__items li h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+
+.article-page__aside__companies .aside__companies__items li h6 img {
+  margin-left: 10px;
+}
+
+.article-page__aside__companies .aside__companies__items li span {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 5px;
+  display: block;
+  color: #6D8088;
+}
+
+.article-page__aside__regions {
+  padding: 35px 0 35px;
+}
+
+.article-page__aside__regions .article-page__aside_title {
+  padding-left: 30px;
+}
+
+.article-page__aside__regions .aside__regions_switch {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 33px 0 15px;
+}
+
+.article-page__aside__regions .aside__regions_switch .aside__regions_switch--link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6D8088;
+  padding: 14px 0;
+  background: #F6FAFE;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.article-page__aside__regions .aside__regions_switch .aside__regions_switch--link:hover {
+  color: #d42a1f;
+}
+
+.article-page__aside__regions .aside__regions_switch .aside__regions_switch--link.switch--active {
+  color: #ffffff;
+  background-color: #d42a1f;
+}
+
+.article-page__aside__regions .aside__regions_item {
+  padding-left: 30px;
+  padding-top: 3px;
+}
+
+.article-page__aside__regions .aside__regions_item--label {
+  color: #8C9BAB;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 14px;
+  display: block;
+  position: relative;
+}
+
+.article-page__aside__regions .aside__regions_item--label:after {
+  content: '';
+  position: absolute;
+  width: -webkit-calc(100% - 19px);
+  width: calc(100% - 19px);
+  right: 0;
+  height: 1px;
+  background: #D3DFE3;
+  top: 50%;
+}
+
+.article-page__aside__regions .aside__regions_item p {
+  margin-bottom: 13px;
+}
+
+.article-page__aside__participants {
+  padding-top: 39px;
+  padding-left: 30px;
+}
+
+.article-page__aside__participants .article-page__aside_title {
+  margin-bottom: 15px;
+}
+
+.article-page__aside__participants .aside__participants li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.article-page__aside__participants .aside__participants li:not(:last-child) {
+  border-bottom: 1px solid #D3DFE3;
+}
+
+.article-page__aside__participants .aside__participants li a {
+  padding-right: 36px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.article-page__aside__participants .aside__participants li a:hover {
+  color: #d42a1f;
+}
+
+.article-page__aside__contacts {
+  padding: 39px 30px 20px;
+}
+
+.article-page__aside__contacts .aside__contacts__text {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  margin-top: 9px;
+}
+
+.article-page__aside__contacts .aside__contacts__link {
+  display: block;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #d42a1f;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  margin-top: 18px;
+}
+
+.article-page__aside__contacts .aside__contacts__link:hover {
+  color: #0066d3;
+}
+
+.article-page__aside__contacts .aside__contacts__link img {
+  margin-right: 10px;
+}
