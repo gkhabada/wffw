@@ -1278,6 +1278,9 @@ a {
   font-weight: bold;
   margin-bottom: 15px;
   padding-right: 30px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .article-page__aside__companies .aside__companies__items li h6 img {
@@ -1290,6 +1293,10 @@ a {
   margin-top: 5px;
   display: block;
   color: #6D8088;
+}
+
+.article-page__aside__companies .aside__companies__items li a:hover h6 {
+  color: #d42a1f;
 }
 
 .article-page__aside__regions {
@@ -1429,4 +1436,10 @@ a {
 
 .article-page__aside__contacts .aside__contacts__link img {
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .article-page__aside {
+    display: none;
+  }
 }
