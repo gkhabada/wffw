@@ -86,7 +86,7 @@ a {
 
   &__main {
     width: 100%;
-		
+
   }
 
   &__aside {
@@ -277,6 +277,124 @@ a {
 		}
 
   }
+}
+
+.add-comment {
+	background: #F6FAFE;
+	padding-left: 96px;
+	padding-right: 96px;
+
+  &__cancel {
+		border-bottom: 1px solid #D3DFE3;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+
+		a {
+			color: $red;
+			transition: 0.4s;
+			font-weight: 600;
+			font-size: 16px;
+			position: relative;
+
+			&:before {
+				content: '';
+				width: 14px;
+				height: 2px;
+				background-color: $red;
+				left: -28px;
+				top: calc(50% - 1px);
+				position: absolute;
+			}
+
+			&:hover {
+				color: $blue;
+
+				&:before {
+					background-color: $blue;
+				}
+			}
+		}
+	}
+
+	&__inner {
+		padding-top: 48px;
+		padding-bottom: 50px;
+		color: #000;
+
+		h2 {
+			font-size: 32px;
+			font-weight: bold;
+		}
+
+		p {
+			margin: 20px 0 30px;
+			font-size: 14px;
+			line-height: 26px;
+		}
+
+		input, textarea {
+			background: #FFFFFF;
+			border: 2px solid #C5D5DC;
+			box-sizing: border-box;
+			border-radius: 6px;
+			padding: 11px 18px;
+			margin-bottom: 20px;
+			font-size: 16px;
+
+			&::-moz-placeholder {	color: #99ACB7;	}
+			&::-webkit-input-placeholder { color: #99ACB7; }
+			&:-ms-input-placeholder { color: #99ACB7; }
+			&::-ms-input-placeholder { color: #99ACB7; }
+			&::placeholder { color: #99ACB7; }
+		}
+
+		input {
+			width: calc(50% - 13px);
+
+			&:last-of-type {
+				margin-left: 20px;
+			}
+		}
+
+		textarea {
+			resize: none;
+			width: 100%;
+			height: 150px;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.add-comment__form_actions {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			a {
+				font-size: 14px;
+				line-height: 26px;
+				color: $red;
+				font-weight: 600;
+				transition: 0.4s;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+
+			button {
+				padding-left: 22px;
+				padding-right: 22px;
+				margin-left: 45px;
+			}
+		}
+	}
+}
+
+.add-comment--popup {
+	.add-comment__inner p {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #D3DFE3;
+	}
 }
 
 @media (max-width: 768px) {
