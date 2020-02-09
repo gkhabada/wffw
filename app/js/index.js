@@ -42,16 +42,16 @@ $('body')
 
 // select
 
-  $('body')
-    .on('click', function() {
-      $('.strategies__head_select--open').hide(100);
-    })
-    .on('click', '.strategies__head_select', function(e) {
+$('body')
+  .on('click', function() {
+    $('.strategies__head_select--open').hide(100);
+  })
+  .on('click', '.strategies__head_select', function(e) {
+    e.stopPropagation();
+    $(this).find('.strategies__head_select--open').on('click', function(e) {
       e.stopPropagation();
-      $(this).find('.strategies__head_select--open').on('click', function(e) {
-        e.stopPropagation();
-      }).toggle(100);
-    });
+    }).toggle(100);
+  });
 
 // leading show more
 
@@ -98,7 +98,7 @@ $(window).resize(function() {
 
 // last-blog_tab-links
 
-function showNews (dataShow) {
+function showNews(dataShow) {
   if (dataShow === 'all') {
     $('.news__last').show();
   } else {
@@ -300,3 +300,91 @@ function closeMobileMenu() {
 $('.mobile-menu__close, section, footer').on('click', function() {
   closeMobileMenu();
 });
+
+
+// article other
+
+var touch = false;
+var slideLength = $('.article-offers__items .article-offers_item').length;
+var slideStep = $('.article-offers_item').first().outerWidth(true);
+var slideCoordX = 0;
+var slideIndex = 0;
+
+$('.article-offers__items').on('mousedown touchstart', function(e) {
+  e.preventDefault();
+  touch = true;
+  if (e.touches) {
+    e = e.touches[0]
+  }
+  slideCoordX = e.clientX
+});
+
+function toSlide(dir) {
+  if (dir === 1) {
+    if (slideIndex+1 === slideLength) {
+      return;
+    }
+    slideIndex++;
+
+    $('.article-offers_item').css('transform', 'translateX(' + -(slideStep * slideIndex) +'px)');
+
+  } else if (dir === 0) {
+    if (slideIndex === 0) {
+      return;
+    }
+    slideIndex--;
+
+    $('.article-offers_item').css('transform', 'translateX(' + -(slideStep * slideIndex) +'px)');
+  }
+}
+
+$('.article-offers__items').on('mousemove touchmove', function(e) {
+  e.preventDefault();
+  if (touch !== false) {
+    if (e.touches) {
+      e = e.touches[0]
+    }
+    if (slideCoordX + 200 < e.clientX) {
+      toSlide(0)
+      slideCoordX = e.clientX
+    } else if (slideCoordX - 300 > e.clientX) {
+      toSlide(1)
+      slideCoordX = e.clientX
+    }
+  };
+});
+
+$('.article-offers .article-offer__button').on('click', function(e) {
+  e.preventDefault();
+  if ($(this).hasClass('article-offer__right')) {
+    toSlide(1)
+  } else if ($(this).hasClass('article-offer__left')) {
+    toSlide(0)
+  }
+})
+
+$(document).on('mouseup touchend', function() {
+  touch = false;
+})
+
+
+// popup
+
+$('.popup_link').on('click touchstart', function (e) {
+  e.stopPropagation();
+  e.preventDefault();
+  if ($($(this).attr('href')).length) {
+
+    $('#modal .modal_content').html($($(this).attr('href')).html())
+    $('#modal').css('display', 'flex');
+  }
+
+  $('#modal, .modal-close').on('click', function () {
+    $('#modal').hide();
+    $('#modal .modal_content').html('');
+  })
+})
+
+$('.modal_content').on('click', function (e) {
+  e.stopPropagation();
+})

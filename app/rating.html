@@ -224,7 +224,7 @@
             </ul>
           </div>
           <div class="article-comments">
-            <a href="" class="article-comments__add">
+            <a href="#add-comment" class="article-comments__add popup_link">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -314,30 +314,52 @@
               <h2>Лучшие предложения</h2>
               <div class="article-offers__action">
                 <span>Другие предложения</span>
-                <a href="" class="article-offer__left">
+                <a href="" class="article-offer__left article-offer__button">
                   <img src="img/bracket-r.svg" alt="Следующий">
                 </a>
-                <a href="" class="article-offer__right">
+                <a href="" class="article-offer__right article-offer__button">
                   <img src="img/bracket-r.svg" alt="Предыдущий">
                 </a>
               </div>
             </div>
             <div class="article-offers__items">
+
               <a href="" class="article-offers_item">
-                <img src="img/slide.png" alt="">
-                <h3>ПАММ счета лучшего управляющего Альфа-Форекс</h3>
+                <div class="article-offers_item_img">
+                  <div class="article-offers_item_img">
+                    <div class="article-offers_item_img--background"></div>
+                    <img src="img/slide.png" alt="">
+                  </div>
+                </div>
+
+                <h3>ПАММ счета лучшего управляющего Альфа-Форекс 1</h3>
               </a>
               <a href="" class="article-offers_item">
-                <img src="img/slide.png" alt="">
-                <h3>ПАММ счета Альпари</h3>
+                <div class="article-offers_item_img">
+                  <div class="article-offers_item_img">
+                    <div class="article-offers_item_img--background"></div>
+                    <img src="img/slide.png" alt="">
+                  </div>
+                </div>
+                <h3>ПАММ счета Альпари 2</h3>
               </a>
               <a href="" class="article-offers_item">
-                <img src="img/slide.png" alt="">
-                <h3>ПАММ счета Альпари</h3>
+                <div class="article-offers_item_img">
+                  <div class="article-offers_item_img">
+                    <div class="article-offers_item_img--background"></div>
+                    <img src="img/slide.png" alt="">
+                  </div>
+                </div>
+                <h3>ПАММ счета Альпари 3</h3>
               </a>
               <a href="" class="article-offers_item">
-                <img src="img/slide.png" alt="">
-                <h3>ПАММ счета лучшего управляющего Альфа-Форекс</h3>
+                <div class="article-offers_item_img">
+                  <div class="article-offers_item_img">
+                    <div class="article-offers_item_img--background"></div>
+                    <img src="img/slide.png" alt="">
+                  </div>
+                </div>
+                <h3>ПАММ счета лучшего управляющего Альфа-Форекс 4</h3>
               </a>
             </div>
           </div>
@@ -619,24 +641,31 @@
       </div>
     </footer>
 
-     <div class="add-comment add-comment--popup">
-       <div class="add-comment__cancel">
-         <a href="">Отменить добавление комментария</a>
-       </div>
-       <div class="add-comment__inner">
-         <h2>Добавить комментарий</h2>
-         <p>Зарегистрированные пользователи могут общаться и оставлять комментарии онлайн. Остальные комментарии проходят модерацию.</p>
-         <form action="" class="add-comment__form">
-           <input type="text" name="name" placeholder="Ваше имя">
-           <input type="email" name="email" placeholder="Ваш E-Mail">
-           <textarea name="comment" placeholder="Введите текст комментария"></textarea>
-           <div class="add-comment__form_actions">
-             <a href="">Зарегистрироваться</a>
-             <button class="red-btn">Отправить комментарий</button>
-           </div>
-         </form>
-       </div>
-     </div>
+
+    <div id="modal">
+      <div class="modal_content"></div>
+    </div>
+    <div id="add-comment">
+      <div class="add-comment add-comment--popup" >
+        <div class="add-comment__cancel modal-close">
+          <span class="">Отменить добавление комментария</span>
+        </div>
+        <div class="add-comment__inner">
+          <h2>Добавить комментарий</h2>
+          <p>Зарегистрированные пользователи могут общаться и оставлять комментарии онлайн. Остальные комментарии проходят модерацию.</p>
+          <form action="" class="add-comment__form">
+            <input type="text" name="name" placeholder="Ваше имя">
+            <input type="email" name="email" placeholder="Ваш E-Mail">
+            <textarea name="comment" placeholder="Введите текст комментария"></textarea>
+            <div class="add-comment__form_actions">
+              <a href="">Зарегистрироваться</a>
+              <button class="red-btn">Отправить комментарий</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
 
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
