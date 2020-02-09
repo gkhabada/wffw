@@ -191,6 +191,8 @@ function Slider(obj) {
     for (var i = 0; i < allSLides.length; i++) {
       if (i == currentSlide - 1) {
         allSLides[currentSlide - 1].forEach(function(el) {
+          // отложенная загрузка изображений
+          $(el).find('.currency_item__logo').attr('src', $(el).find('.currency_item__logo').attr('data-src'));
           $(el).show();
         });
       } else {
@@ -211,6 +213,11 @@ function Slider(obj) {
         }
       }
     }
+
+    // отложенная загрузка изображений
+    allSLides[0].forEach(function(item) {
+      $(item).find('.currency_item__logo').attr('src', $(item).find('.currency_item__logo').attr('data-src'));
+    });
   }
 
   $(obj.filter).on('change', function() {
@@ -344,7 +351,7 @@ $('.article-offers__items').on('mousemove touchmove', function(e) {
     if (e.touches) {
       e = e.touches[0]
     }
-    if (slideCoordX + 200 < e.clientX) {
+    if (slideCoordX + 150 < e.clientX) {
       toSlide(0)
       slideCoordX = e.clientX
     } else if (slideCoordX - 300 > e.clientX) {
