@@ -150,3 +150,37 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 480px) {
+	footer  {
+
+		.footer_links {
+			padding-bottom: 0;
+			.wrapper {
+				padding-right: 37px;
+				padding-left: 37px;
+
+				.links_item {
+					width: 100%;
+					margin-bottom: 40px;
+
+					&:not(:last-child) {
+						border-bottom: 1px solid #3B3B43;
+						padding-bottom: 24px;
+					}
+					p {
+						font-size: 34px;
+					}
+					li a {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		.footer_info {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+}

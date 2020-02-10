@@ -522,6 +522,34 @@ footer .footer_info a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  footer .footer_links {
+    padding-bottom: 0;
+  }
+  footer .footer_links .wrapper {
+    padding-right: 37px;
+    padding-left: 37px;
+  }
+  footer .footer_links .wrapper .links_item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  footer .footer_links .wrapper .links_item:not(:last-child) {
+    border-bottom: 1px solid #3B3B43;
+    padding-bottom: 24px;
+  }
+  footer .footer_links .wrapper .links_item p {
+    font-size: 34px;
+  }
+  footer .footer_links .wrapper .links_item li a {
+    color: #fff;
+  }
+  footer .footer_info {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 .hide {
   display: none !important;
 }
@@ -690,6 +718,7 @@ header nav .nav .nav__items li a {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
+  font-weight: 600;
 }
 
 header nav .nav .nav__items li a:hover {
@@ -744,8 +773,8 @@ header nav .nav .nav__course img {
 }
 
 .mobile-header__search {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   outline: none;
 }
 
@@ -804,7 +833,7 @@ header nav .nav .nav__course img {
   position: absolute;
   z-index: 2;
   top: 18px;
-  right: 21px;
+  right: 22px;
   width: 24px;
   height: 24px;
   background-color: transparent;
@@ -1106,7 +1135,7 @@ header nav .nav .nav__course img {
 
 @media (max-width: 900px) {
   header nav .nav .nav__items li {
-    margin-right: 7px;
+    margin-right: 6px;
   }
   header nav .nav .nav__items li a {
     font-size: 13px;
@@ -1399,7 +1428,6 @@ a {
   font-size: 30px;
   line-height: 42px;
   color: #000000;
-  min-height: 114px;
 }
 
 .strategies .strategies__items .strategies__item_text {
@@ -1477,6 +1505,7 @@ a {
 
 .strategies .half .strategies__item .strategies__item_title {
   padding-bottom: 22px;
+  min-height: 114px;
 }
 
 .strategies .half .strategies__item .strategies__item_text {
@@ -1573,11 +1602,19 @@ a {
 
 @media (max-width: 480px) {
   .strategies {
+    margin: 0;
     padding: 40px 0 30px;
+  }
+  .strategies .strategies__head {
+    margin-bottom: 0;
+  }
+  .strategies .strategies__items .strategies__item {
+    margin-top: 20px;
   }
   .strategies .strategies__items .strategies__item_title {
     font-size: 24px;
     line-height: 42px;
+    padding-bottom: 40px !important;
   }
   .strategies .strategies__items .strategies__item_footer--info span img {
     margin-right: 3px;
@@ -1590,5 +1627,8 @@ a {
   }
   .strategies .strategies__items .strategies__item_footer--read-more img {
     margin: 0;
+  }
+  .strategies .strategies__show-more {
+    margin-top: 30px;
   }
 }

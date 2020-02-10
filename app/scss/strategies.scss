@@ -62,10 +62,10 @@ a {
 }
 
 //inner-page
+
 .inner-page {
 	background-color: #f6fafe;
 }
-
 
 // banner
 
@@ -208,7 +208,6 @@ a {
 				font-size: 30px;
 				line-height: 42px;
 				color: #000000;
-				min-height: 114px;
 			}
 
 			&_text {
@@ -274,6 +273,7 @@ a {
 
 			.strategies__item_title {
 				padding-bottom: 22px;
+				min-height: 114px;
 			}
 
 			.strategies__item_text {
@@ -371,12 +371,22 @@ a {
 
 @media (max-width: 480px) {
 	.strategies {
+		margin: 0;
 		padding: 40px 0 30px;
 
+		.strategies__head {
+			margin-bottom: 0;
+		}
+
 		.strategies__items {
+			.strategies__item {
+		    margin-top: 20px;
+			}
+
 			.strategies__item_title {
 				font-size: 24px;
 				line-height: 42px;
+				padding-bottom: 40px!important;
 			}
 
 			.strategies__item_footer--info span {
@@ -387,15 +397,17 @@ a {
 
 			.strategies__item_footer--read-more {
 				margin-top: -3px;
-
 				span {
 					display: none;
 				}
-
 				img {
 					margin: 0;
 				}
 			}
+		}
+
+		.strategies__show-more {
+	    margin-top: 30px;
 		}
 	}
 }

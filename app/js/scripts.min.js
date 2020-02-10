@@ -214,10 +214,12 @@ function Slider(obj) {
       }
     }
 
-    // отложенная загрузка изображений
-    allSLides[0].forEach(function(item) {
-      $(item).find('.currency_item__logo').attr('src', $(item).find('.currency_item__logo').attr('data-src'));
-    });
+    if(allSLides.length) {
+      // отложенная загрузка изображений
+      allSLides[0].forEach(function(item) {
+        $(item).find('.currency_item__logo').attr('src', $(item).find('.currency_item__logo').attr('data-src'));
+      });
+    }
   }
 
   $(obj.filter).on('change', function() {
