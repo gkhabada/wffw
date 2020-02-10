@@ -55,39 +55,40 @@ $('body')
 
 // leading show more
 
-function showLeadingItems(count) {
-  if ($('.leading_item').length > count) {
+function showMoreItems(count, items, btn) {
+  if ($(items).length > count) {
 
-    let leadingCount = $('.leading_item').length
+    let leadingCount = $(items).length
     let i = count;
     for (let i = count; i < leadingCount; i++) {
-      $($('.leading_item')[i]).hide();
+      $($(items)[i]).hide();
     }
 
 
-    $('.leading_show-more').on('click', function() {
+    $(btn).on('click', function(e) {
+      e.preventDefault();
       if (i <= leadingCount) {
         let j = i;
         for (i; i < j + count && i < leadingCount; i++) {
-          $($('.leading_item')[i]).show();
+          $($(items)[i]).show();
         }
         i = j + count;
         if (i >= leadingCount) {
-          $('.leading_show-more').hide();
+          $(btn).hide();
         }
       }
     })
 
   } else {
-    $('.leading_show-more').hide();
+    $(btn).hide();
   }
 }
 
 function adaptiveLeadingItems() {
   if (window.innerWidth < 768) {
-    showLeadingItems(3);
+    showMoreItems(3, '.leading_item', '.leading_show-more');
   } else {
-    showLeadingItems(6);
+    showMoreItems(6, '.leading_item', '.leading_show-more');
   }
 }
 adaptiveLeadingItems();
@@ -397,3 +398,21 @@ $('.popup_link').on('click touchstart', function (e) {
 $('.modal_content').on('click', function (e) {
   e.stopPropagation();
 })
+
+// переключатель
+
+$('.aside__regions_switch--link').on('click', function(e)  {
+  e.preventDefault();
+  if(!($(this).hasClass('switch--active'))) {
+
+    $('.aside__regions_switch--link').removeClass('switch--active')
+    $(this).addClass('switch--active');
+
+    $('.regions__items').addClass('hide');
+    $($(this).attr('href')).removeClass('hide')
+  }
+})
+
+// показать ещё статьи
+
+showMoreItems(5, '.strategies__item', '.strategies__show-more');

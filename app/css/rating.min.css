@@ -1921,6 +1921,10 @@ a {
   background-color: #d42a1f;
 }
 
+.article-page__aside__regions .hide {
+  display: none;
+}
+
 .article-page__aside__regions .aside__regions_item {
   padding-left: 30px;
   padding-top: 3px;
