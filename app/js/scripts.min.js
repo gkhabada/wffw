@@ -311,6 +311,11 @@ $('.mobile-menu__close, section, footer').on('click', function() {
   closeMobileMenu();
 });
 
+// news clamp
+$('.news_text').each(function(index, el) {
+  $clamp(el, {clamp: 2});
+});
+
 
 // article other
 
