@@ -264,6 +264,16 @@ a {
 							color: $red;
 						}
 
+						&:after {
+							position: relative;
+							content: '';
+							background-image: url(../img/bracket-r.svg);
+							background-repeat: no-repeat;
+							padding-right: 10px;
+							left: 10px;
+							background-position: center left;
+						}
+
 						img {
 							margin-left: 14px;
 						}
@@ -533,6 +543,16 @@ a {
 						color: #000000;
 						transition: 0.4s;
 
+						&:after {
+							position: relative;
+							content: '';
+							background-image: url(../img/bracket-r.svg);
+							background-repeat: no-repeat;
+							padding-right: 10px;
+							left: 10px;
+							background-position: center left;
+						}
+
 						img {
 							margin-left: 14px;
 						}
@@ -592,6 +612,16 @@ a {
 					margin-bottom: 15px;
 					padding-right: 45px;
 					transition: 0.4s;
+
+					&:after {
+						position: relative;
+						content: '';
+						background-image: url(../img/bracket-r.svg);
+						background-repeat: no-repeat;
+						padding-right: 10px;
+						left: 10px;
+						background-position: center left;
+					}
 
 					img {
 						margin-left: 10px;
