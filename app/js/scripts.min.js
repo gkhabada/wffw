@@ -136,6 +136,7 @@ function Slider(obj) {
   let prevBtn = $(obj.btnPrev);
   let nextBtn = $(obj.btnNext);
   let countShow = obj.itemsShowCount;
+  let sliderLine = $(obj.sliderLine);
   let slideCount = Math.ceil(currencyCount / countShow);
   let currentSlide = 1;
   let allSLides = [];
@@ -144,8 +145,9 @@ function Slider(obj) {
     $(items).closest('.currency').find('.currency_head_actions').hide();
   }
 
-  firstShow()
-  toSlide()
+  firstShow();
+  toSlide();
+  checkSliderLine();
 
   nextBtn.on('click', function(e) {
     e.preventDefault();
@@ -154,8 +156,9 @@ function Slider(obj) {
       currentSlide++;
       prevBtn.addClass('can-arrow')
 
-      checkButtons()
-      toSlide()
+      checkButtons();
+      toSlide();
+      checkSliderLine();
 
     }
   })
@@ -167,8 +170,9 @@ function Slider(obj) {
       currentSlide--;
       nextBtn.addClass('can-arrow')
 
-      checkButtons()
-      toSlide()
+      checkButtons();
+      toSlide();
+      checkSliderLine();
     }
   })
 
@@ -185,6 +189,8 @@ function Slider(obj) {
     } else {
       nextBtn.addClass('can-arrow')
     }
+
+
 
   }
 
@@ -221,6 +227,7 @@ function Slider(obj) {
         $(item).find('.currency_item__logo').attr('src', $(item).find('.currency_item__logo').attr('data-src'));
       });
     }
+    checkButtons();
   }
 
   $(obj.filter).on('change', function() {
@@ -252,6 +259,15 @@ function Slider(obj) {
 
   })
 
+  function checkSliderLine() {
+    if(sliderLine) {
+      console.log(currencyCount, countShow, slideCount)
+      const lineWidth = 100 / slideCount
+      sliderLine.css({'width': `${lineWidth}%`, 'left': `${(currentSlide - 1) * lineWidth}%`});
+    }
+  }
+
+
 }
 
 function sliderInits(count) {
@@ -270,6 +286,13 @@ function sliderInits(count) {
     btnNext: '.stocks .next-arrow',
     itemsShowCount: count,
     filter: '.stocks .currency_country'
+  });
+  new Slider({
+    items: '.articles .article',
+    btnPrev: '.articles .prev-arrow',
+    btnNext: '.articles .next-arrow',
+    itemsShowCount: 6,
+    sliderLine: '.articles_line--red'
   });
 }
 
