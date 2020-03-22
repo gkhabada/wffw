@@ -261,7 +261,6 @@ function Slider(obj) {
 
   function checkSliderLine() {
     if(sliderLine) {
-      console.log(currencyCount, countShow, slideCount)
       const lineWidth = 100 / slideCount
       sliderLine.css({'width': `${lineWidth}%`, 'left': `${(currentSlide - 1) * lineWidth}%`});
     }
@@ -401,11 +400,6 @@ $('.article-offers .article-offer__button').on('click', function(e) {
   }
 })
 
-$(document).on('mouseup touchend', function() {
-  touch = false;
-})
-
-
 // popup
 
 $('.popup_link').on('click touchstart', function (e) {
@@ -444,3 +438,57 @@ $('.aside__regions_switch--link').on('click', function(e)  {
 // показать ещё статьи
 
 showMoreItems(5, '.strategies__item', '.strategies__show-more');
+
+// статистики
+
+  if ($('.statistic__items').length) {
+    var touch = false;
+    var statisticCoordX = 0;
+
+    function statisticInit() {
+      $('.statistic__items').scrollLeft(0);
+      $('.cost_line-mobile span').css('left', '0');
+    }
+    statisticInit();
+    $(window).resize(function() {
+      statisticInit();
+    });
+
+    $('.statistic__items').on('mousedown touchstart', function(e) {
+      e.preventDefault();
+      touch = true;
+      if (e.touches) e = e.touches[0]
+      statisticCoordX = e.clientX
+    });
+
+    $('.statistic__items').on('mousemove touchmove', function(e) {
+      e.preventDefault();
+      if (touch !== false) {
+        if (e.touches) e = e.touches[0]
+
+        if (statisticCoordX + 100 < e.clientX) {
+          if ($('.statistic__items').scrollLeft() === 0) return
+          $('.statistic__items').animate({ scrollLeft: '-=140' }, 80, 'swing');
+          statisticCoordX = e.clientX
+        } else if (statisticCoordX - 100 > e.clientX) {
+          if ($('.statistic__items').scrollLeft() >= ($('.statistic__items')[0].scrollWidth - $('.statistic__items').outerWidth() - 20)) return
+          $('.statistic__items').animate({ scrollLeft: '+=140' }, 80, 'swing');
+          statisticCoordX = e.clientX
+        }
+      };
+    });
+
+    $(document).on('mouseup touchend', function() {
+      touch = false;
+    })
+
+    $('.statistic__arrow-buttons').on('click', function(e) {
+      console.log(e)
+      if ($(e.target).hasClass('btn-left')) {
+        $('.statistic__items').animate({ scrollLeft: '-=140' }, 80, 'swing');
+      } else if ($(e.target).hasClass('btn-right')) {
+        $('.statistic__items').animate({ scrollLeft: '+=140' }, 80, 'swing');
+      }
+    })
+
+  }
