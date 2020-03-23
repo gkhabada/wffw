@@ -319,14 +319,14 @@ $('.mobile-header__burger').on('click', function() {
   $('.mobile-menu').css('display', 'flex');
   $('#wrapper').css('overflow-x', 'hidden');
 
-  $('section, footer').css({
+  $('main, section, footer').css({
     'transform': 'translateX(calc(100vw - 92px))'
   });
 });
 
 function closeMobileMenu() {
   $('.mobile-menu').css('display', 'none');
-  $('section, footer').css('transform', 'translateX(0)');
+  $('main, section, footer').css('transform', 'translateX(0)');
 
 }
 $('.mobile-menu__close, section, footer').on('click', function() {
@@ -483,7 +483,6 @@ showMoreItems(5, '.strategies__item', '.strategies__show-more');
     })
 
     $('.statistic__arrow-buttons').on('click', function(e) {
-      console.log(e)
       if ($(e.target).hasClass('btn-left')) {
         $('.statistic__items').animate({ scrollLeft: '-=140' }, 80, 'swing');
       } else if ($(e.target).hasClass('btn-right')) {

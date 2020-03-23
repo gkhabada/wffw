@@ -1104,6 +1104,8 @@ nav .wrapper li a:hover {
 }
 
 .statistic .statistic__items {
+  margin-right: 0;
+  margin-left: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1117,13 +1119,6 @@ nav .wrapper li a:hover {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-}
-
-.statistic .statistic__items .simplebar-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .statistic .statistic__items .statistic__item {
@@ -1210,8 +1205,9 @@ nav .wrapper li a:hover {
   top: -12px;
 }
 
-.statistic div {
-  width: 100%;
+.statistic > div {
+  width: -webkit-calc((100% - 1120px) / 2);
+  width: calc((100% - 1120px) / 2);
 }
 
 .statistic__arrow-buttons {
@@ -2305,14 +2301,6 @@ nav .wrapper li a:hover {
   .articles .articles__items .article:nth-child(3n) {
     margin-right: 0;
   }
-  .articles .last-blog_right {
-    display: block;
-    margin-top: 20px;
-  }
-  .articles .news_time {
-    margin-top: 12px;
-    display: inline-block;
-  }
   .last-blog .last-blog__content {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2446,6 +2434,14 @@ nav .wrapper li a:hover {
   .articles__actions .articles_show-all:hover {
     color: #ffffff;
     background-color: #0066d3;
+  }
+  .articles .last-blog_right {
+    display: block;
+    margin-top: 20px;
+  }
+  .articles .news_time {
+    margin-top: 12px;
+    display: inline-block;
   }
   .brokers {
     padding-bottom: 0;

@@ -443,16 +443,14 @@ nav {
 	padding: 0 10px;
 
 	.statistic__items {
+		margin-right: 0;
+		margin-left: auto;
 		display: flex;
 		width: 100%;
 		overflow: hidden;
 		flex-shrink: 0;
 		padding: 18px 0 17px;
 		flex-wrap: nowrap;
-
-		.simplebar-content {
-			display: flex;
-		}
 
 		.statistic__item {
 			border-left: 3px solid black;
@@ -533,8 +531,8 @@ nav {
 		}
 	}
 
-	div {
-		width: 100%;
+	& > div {
+		width: calc((100% - 1120px) / 2);
 	}
 
 	&__arrow-buttons {
@@ -1579,16 +1577,6 @@ nav {
 		 }
 
 		}
-
-		.last-blog_right {
-			display: block;
-			margin-top: 20px;
-		}
-
-		.news_time {
-			margin-top: 12px;
-			display: inline-block;
-		}
 	}
 
 
@@ -1725,6 +1713,16 @@ nav {
 					background-color: $blue;
 				}
 			}
+		}
+
+		.last-blog_right {
+			display: block;
+			margin-top: 20px;
+		}
+
+		.news_time {
+			margin-top: 12px;
+			display: inline-block;
 		}
 	}
 
