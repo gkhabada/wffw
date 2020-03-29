@@ -1100,12 +1100,15 @@ nav .wrapper li a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 10px;
 }
 
 .statistic .statistic__items {
-  margin-right: 0;
-  margin-left: auto;
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1205,12 +1208,9 @@ nav .wrapper li a:hover {
   top: -12px;
 }
 
-.statistic > div {
-  width: -webkit-calc((100% - 1120px) / 2);
-  width: calc((100% - 1120px) / 2);
-}
-
 .statistic__arrow-buttons {
+  max-width: 163px;
+  width: 100%;
   min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1246,6 +1246,12 @@ nav .wrapper li a:hover {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.statistic__block {
+  max-width: 163px;
+  width: 100%;
+  min-width: 100px;
 }
 
 .firts-block {
